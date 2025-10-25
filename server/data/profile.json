@@ -1,0 +1,45 @@
+{
+  "name": "Sohamdeep Mondal",
+  "email": "sohamdeep2016@gmail.com",
+  "phone": "+91 79808 73858",
+  "location": "Kolkata, India",
+  "github": "https://github.com/sohamdeep72",
+  "linkedin": "https://www.linkedin.com/in/sohamdeep-mondal",
+  "tagline": "Final-year Civil Engineering student aspiring to become a Software Developer.",
+  "summary": "Final-year Civil Engineering student at Jadavpur University passionate about software engineering and data analytics. Skilled in C++, Python, JavaScript, Node.js, React, PostgreSQL, and modern web technologies. Enthusiastic about building full-stack systems and analyzing real-world data to generate actionable insights.",
+  "about_detailed": [
+    "I’m a final-year Civil Engineering student at Jadavpur University (2026) with a deep interest in software development and data analytics.",
+    "Over the past few years, I have developed a solid understanding of algorithms, databases, and full-stack web development using JavaScript frameworks.",
+    "In addition, I have explored data analytics and machine learning through hands-on projects, where I analyzed real-world datasets using Python libraries like Pandas, NumPy, and Matplotlib.",
+    "I love solving problems and aim to merge my analytical and technical skills to create impactful digital solutions."
+  ],
+  "skills_categories": {
+    "Languages": ["C", "C++", "Python", "JavaScript"],
+    "Web Development": ["Node.js", "Express.js", "React.js", "REST APIs", "TailwindCSS", "Bootstrap"],
+    "Databases": ["PostgreSQL", "MySQL"],
+    "Tools": ["Postman", "Jupyter Notebook", "Git", "Docker", "Kubernetes"],
+    "Core Concepts": ["Data Structures & Algorithms", "OOP", "DBMS"],
+    "Data Analytics": ["Excel", "Tableau", "Pandas", "NumPy", "Matplotlib", "Machine Learning Algorithms"]
+  },
+  "projects": [
+    {
+      "title": "File Compressor (Huffman)",
+      "description": "C++-based file compressor using Huffman Encoding for efficient file size reduction.",
+      "tech": ["C++", "STL", "Algorithms"],
+      "repo": "https://github.com/sohamdeep72/Compressor-decompressor"
+    },
+    {
+      "title": "URL Shortener App",
+      "description": "A URL Shortening web app with React frontend and Node.js backend using PostgreSql for storing clicking analytics",
+      "tech": ["React", "Node.js", "Express", "PostgreSQL"],
+      "repo": "https://github.com/sohamdeep72/url"
+    },
+    {
+  "title": "EDA on Loan Risk",
+  "description": "Performed an in-depth exploratory data analysis to identify key factors influencing loan default risk in banking datasets.",
+  "tech": ["Python", "NumPy", "Pandas", "Jupyter Notebook", "MySQL"],
+  "repo": "https://github.com/sohamdeep72/EDAonLoanRisk"
+}
+
+  ]
+}
