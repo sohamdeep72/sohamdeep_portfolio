@@ -11,7 +11,7 @@ export default function Navbar({ onNavigate = () => {}, page = "home" }) {
   ];
 
   const resumeUrl =
-    "https://drive.google.com/file/d/109s1Tyd4Tyy8v-ZIfv01M8y5io5nZOaQ/view?usp=sharing";
+    "https://drive.google.com/file/d/109s1Tyd4Tyy8v-ZIfv01M8y5io5nZOaQasmakdm";
 
   const handleNavigate = (id) => {
     setOpen(false);
