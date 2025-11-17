@@ -16,7 +16,7 @@ export default function CustomCursor() {
   const innerRef = useRef(null);
 
   // Tweak this for delay effect: 0.24 gives a clear but smooth trail.
-  const LERP = 0.24;
+  const LERP = 0.20;
 
   const initialX = typeof window !== "undefined" ? window.innerWidth / 2 : 0;
   const initialY = typeof window !== "undefined" ? window.innerHeight / 2 : 0;
