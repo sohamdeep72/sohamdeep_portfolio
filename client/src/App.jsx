@@ -14,27 +14,32 @@ export default function App() {
   const [page, setPage] = useState("home");
   const [activeProject, setActiveProject] = useState(null);
 
-    useEffect(() => {
-    axios.get("http://localhost:4000/api/profile")
+  // read API base from build-time env var set on Netlify (VITE_ prefix)
+  // If not provided, default to empty string (calls same origin).
+  const API_BASE = import.meta.env.VITE_API_BASE || "";
+
+  useEffect(() => {
+    // build the full url using API_BASE; if API_BASE is '', this becomes '/api/profile'
+    axios
+      .get(`${API_BASE}/api/profile`, { timeout: 8000 })
       .then((res) => setProfile(res.data))
       .catch((err) => {
         console.error("Failed to fetch profile:", err);
         setProfile(null);
       });
-  }, []);
+  }, [API_BASE]);
 
-
-  if (!profile) return <div className="h-screen flex items-center justify-center text-gray-400">Loading…</div>;
+  if (!profile)
+    return (
+      <div className="h-screen flex items-center justify-center text-gray-400 bg-ink">
+        Loading…
+      </div>
+    );
 
   return (
     <div className="min-h-screen bg-ink text-white relative">
-      {/* Background animation */}
       <BackgroundCanvas />
-
-      {/* Custom cursor (renders two absolutely-positioned divs) */}
       <CustomCursor />
-
-      {/* Page UI */}
       <Navbar onNavigate={setPage} page={page} />
 
       <main className="max-w-6xl mx-auto px-4 relative z-10">
