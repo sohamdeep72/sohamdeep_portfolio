@@ -439,4 +439,20 @@ header.glass {
     pointer-events: none !important;
   }
 }
+/* Mobile Menu Panel Styling */
+.mobile-menu-panel {
+  background: #041018; /* solid dark panel, not transparent */
+  width: 86vw;
+  max-width: 340px;
+  min-width: 260px;
+  color: #e8f0f2;
+}
+
+/* Stronger shadow & subtle border on small screens */
+@media (max-width: 767px) {
+  .mobile-menu-panel {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+  }
+}
 
