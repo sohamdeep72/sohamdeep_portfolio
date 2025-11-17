@@ -318,4 +318,54 @@ canvas { will-change: transform; }
 .custom-cursor-inner {
   transition: transform 50ms linear, background 120ms ease;
 }
+/* Cursor smoothing & mobile hide fallback */
+.custom-cursor-outer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 72px;
+  height: 72px;
+  margin-left: -36px;
+  margin-top: -36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0, 255, 200, 0.08);
+  box-shadow: 0 6px 28px rgba(0,255,200,0.03), inset 0 1px 0 rgba(255,255,255,0.02);
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  transition: width 110ms ease, height 110ms ease, border-color 110ms ease, box-shadow 110ms ease;
+  z-index: 9999;
+}
+.custom-cursor-outer.cursor--active {
+  width: 96px;
+  height: 96px;
+  margin-left: -48px;
+  margin-top: -48px;
+  border-color: rgba(0,255,200,0.18);
+  box-shadow: 0 18px 45px rgba(0,255,200,0.06);
+}
+.custom-cursor-inner {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  margin-top: -4px;
+  border-radius: 50%;
+  background: rgba(0,255,200,0.95);
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  transition: transform 50ms linear;
+  z-index: 10000;
+}
+
+/* Hide cursor on coarse pointer / small screens as a double-safety fallback */
+@media (pointer: coarse), (max-width: 767px) {
+  .custom-cursor-outer,
+  .custom-cursor-inner {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
 
