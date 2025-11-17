@@ -368,4 +368,22 @@ canvas { will-change: transform; }
     pointer-events: none !important;
   }
 }
+/* Make header glass and keep it above canvas */
+header.glass {
+  background: linear-gradient(180deg, rgba(6,10,12,0.6), rgba(3,6,8,0.45));
+  backdrop-filter: blur(6px);
+}
+
+/* Ensure mobile full-screen menu doesn't allow page scroll behind */
+.md\\:hidden.fixed.inset-0 {
+  overflow: hidden;
+}
+
+/* Slight tweak for mobile menu panel */
+@media (max-width: 767px) {
+  .mobile-menu-panel {
+    width: 92vw;
+    max-width: 320px;
+  }
+}
 
