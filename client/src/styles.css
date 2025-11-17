@@ -455,31 +455,4 @@ header.glass {
     border-left: 1px solid rgba(255, 255, 255, 0.06);
   }
 }
-/* Mobile Menu Panel: fixed right-side panel, opaque and readable */
-.mobile-menu-panel {
-  background: #041018; /* solid dark background */
-  width: 88vw;
-  max-width: 380px;
-  min-width: 260px;
-  color: #e8f0f2;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* ensure the backdrop covers everything */
-.fixed.inset-0.z-50 {
-  z-index: 9998; /* keep backdrop below panel but above other content */
-}
-
-/* higher z-index for the panel itself */
-.fixed.top-0.right-0.z-60 {
-  z-index: 9999;
-}
-
-/* remove any pointer-events from background canvas while menu is open */
-@media (max-width: 1024px) {
-  .background-canvas, canvas {
-    pointer-events: none;
-  }
-}
 
