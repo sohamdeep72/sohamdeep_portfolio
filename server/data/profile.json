@@ -18,7 +18,7 @@
     "Web Development": ["Node.js", "Express.js", "React.js", "REST APIs", "TailwindCSS", "Bootstrap"],
     "Databases": ["PostgreSQL", "MySQL"],
     "Tools": ["Postman", "Git", "Docker", "Kubernetes"],
-    "Core Concepts": ["Data Structures & Algorithms", "OOP", "DBMS"],
+    "Core Concepts": ["Data Structures & Algorithms", "System Design","OOP", "DBMS"],
     "Data Analytics": ["Excel", "Tableau", "Pandas", "NumPy", "Matplotlib", "Machine Learning Algorithms"]
   },
   "projects": [
